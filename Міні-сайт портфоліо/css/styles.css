@@ -1,0 +1,959 @@
+@font-face {
+  font-family: 'Inknut Antiqua';
+  src: url(../fonts/InknutAntiqua-Medium.woff2) format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Inknut Antiqua';
+  src: url(../fonts/InknutAntiqua-Black.woff2) format('woff2');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  background-color: rgb(0, 0, 0);
+  font-family: 'Inknut Antiqua';
+  margin: 0;
+}
+
+img {
+  display: block;
+  max-width: 580px;
+  height: auto;
+}
+
+.header {
+  display: flex;
+  position: fixed;
+  justify-content: space-between;
+  text-align: center;
+  background-color: black;
+  z-index: 1;
+  left: 0;
+  width: 100%;
+}
+
+.header_text {
+  font-family: 'Inknut Antiqua';
+  font-weight: 900;
+  font-size: 20px;
+  color: #E75050;
+  margin-left: 100px;
+  margin-right: 100px;
+  text-decoration: none;
+}
+
+.skills {
+  display: flex;
+  align-items: center;
+  padding-top: 76px;
+  margin-right: 128px;
+}
+
+.text {
+  color: #CACACA;
+}
+
+.header_text_skills1 {
+  font-weight: 900;
+  font-size: 42px;
+  line-height: 42px;
+  margin-left: 50px;
+  margin-top: 60px;
+}
+
+.header_text_skills2 {
+  font-weight: 900;
+  font-size: 32px;
+  line-height: 32px;
+  margin-left: 50px;
+}
+
+.text_skills {
+  font-weight: 500;
+  font-size: 26px;
+  line-height: 1.6;
+  margin-left: 50px;
+}
+
+.experience {
+  margin-top: 140px;
+  margin-right: 128px;
+  margin-left: 128px;
+  text-align: center;
+}
+
+.text_experience {
+  font-weight: 500;
+  color:#CACACA;
+  font-size: 26px;
+}
+
+.table_experience {
+  position: relative;
+  font-weight: 500;
+  font-size: 26px;
+  width: 100%;
+}
+
+.content_container {
+  display: flex;
+}
+
+.skill_lines {
+  text-align: left;
+  margin-left: 70px;
+  width: 100%;
+}
+
+.text_skill_bar {
+  font-weight: 500;
+  font-size: 26px;
+  margin: 20px 0;
+}
+
+.skill_bar {
+  flex-grow: 1;
+  height: 20px;
+  background-color: #CACACA;
+  border-radius: 3px;
+  margin: 0;
+}
+
+.skill_per {
+  height: 20px;
+  background-color: #E75050;
+  position: relative;
+}
+
+.skill_per.fill {
+  animation: fillBar 4.5s 1;
+}
+
+.skill_per::before {
+  content: attr(per);
+  position: absolute;
+  background-color: #CACACA;
+  border-radius: 4px;
+  font-size: 12px;
+  top: -40px;
+  right: 0;
+  transform: translateX(50%);
+}
+
+.skill_per::after {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: #CACACA;
+  top: -18px;
+  right: 0;
+  transform: translateX(50%) rotate(45deg);
+}
+
+@keyframes fillBar {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 100%;
+  }
+}
+
+.hidden {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.my_education {
+  margin-top: 224px;
+  margin-right: 128px;
+  margin-left: 128px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.text_myeducation {
+  font-weight: 500;
+  font-size: 26px;
+  line-height: 1.6;
+  margin-left: 62px;
+}
+
+.contacts {
+  margin-top: 248px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.text_contacts {
+  font-weight: 500;
+  font-size: 26px;
+  line-height: 1.6;
+  margin-top: 128px;
+  margin-left: 48px;
+  margin-right: 48px;
+  text-align: center;
+}
+
+.links {
+  margin-right: 132px;
+  margin-left: 132px;
+  margin-top: 336px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media (max-width: 820px) {
+  .header {
+    display: flex;
+    position: fixed;
+    justify-content: space-between;
+    text-align: center;
+    background-color: black;
+    width: 100%;
+  }
+
+  .header_text {
+    font-family: 'Inknut Antiqua', serif;
+    font-weight: 900;
+    font-size: 8px;
+    color: #E75050;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .skills {
+    display: flex;
+    align-items: center;
+    padding-top: 32px;
+    margin-right: 80px;
+  }
+
+  .skills img {
+    max-width: 360px;
+  }
+
+  .header_text_skills1 {
+    font-size: 26px;
+    line-height: 26px;
+    margin-left: 32px;
+  }
+  
+  .header_text_skills2 {
+    font-size: 20px;
+    line-height: 20px;
+    margin-left: 32px;
+  }
+
+  .text_skills {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1;
+    margin-left: 32px;
+  }
+
+  .my_education {
+    margin-top: 140px;
+    margin-right: 80px;
+    margin-left: 80px;
+    display: flex;
+    align-items: center;
+  }
+
+  .my_education img {
+    max-width: 275px;
+  }
+
+  .text_myeducation {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1;
+    margin-left: 38px;
+  }
+
+  .experience {
+    margin-top: 112px;
+    margin-right: 60px;
+    margin-left: 60px;
+    text-align: center;
+  }
+  
+  .text_experience {
+    font-weight: 500;
+    color:#CACACA;
+    font-size: 18px;
+  }
+  
+  .table_experience {
+    position: relative;
+    font-weight: 500;
+    font-size: 16px;
+    width: 100%;
+  }
+  
+  .content_container {
+    display: flex;
+  }
+  
+  .skill_lines {
+    text-align: left;
+    margin-left: 38px;
+    width: 100%;
+  }
+  
+  .text_skill_bar {
+    font-weight: 500;
+    font-size: 20px;
+    margin: 16px 0;
+  }
+  
+  .skill_bar {
+    flex-grow: 1;
+    height: 16px;
+    background-color: #CACACA;
+    border-radius: 2px;
+    margin: 0;
+  }
+  
+  .skill_per {
+    height: 16px;
+    background-color: #E75050;
+    position: relative;
+  }
+
+  .skill_per.fill {
+    animation: fillBar 4.5s 1;
+}
+  
+  .skill_per::before {
+    content: attr(per);
+    position: absolute;
+    background-color: #CACACA;
+    border-radius: 3px;
+    font-size: 9px;
+    top: -32px;
+    right: 0;
+    transform: translateX(50%);
+  }
+  
+  .skill_per::after {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background-color: #CACACA;
+    top: -16px;
+    right: 0;
+    transform: translateX(50%) rotate(45deg);
+  }
+  
+  @keyframes fillBar {
+    from {
+      width: 0;
+    }
+  
+    to {
+      width: 100%;
+    }
+  }
+
+  .contacts {
+    margin-top: 180px;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .text_contacts {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1;
+    margin-top: 80px;
+    margin-left: 24px;
+    margin-right: 24px;
+    text-align: center;
+  }
+
+  .contacts img {
+    max-width: 248px;
+  }
+  
+  .links {
+    margin-right: 82px;
+    margin-left: 82px;
+    margin-top: 180px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .links img {
+    max-width: 40px;
+  }
+}
+
+@media (max-width: 540px) {
+  .header {
+    display: flex;
+    position: fixed;
+    justify-content: space-between;
+    text-align: center;
+    background-color: black;
+    width: 100%;
+  }
+
+  .header_text {
+    font-family: 'Inknut Antiqua', serif;
+    font-weight: 900;
+    font-size: 8px;
+    color: #E75050;
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .skills {
+    padding-top: 24px;
+    margin-right: 38px;
+    display: flex;
+    align-items: center;
+  }
+
+  .skills img {
+    max-width: 200px;
+  }
+
+  .header_text_skills1 {
+    font-size: 18px;
+    line-height: 18px;
+    margin-left: 16px;
+  }
+  
+  .header_text_skills2 {
+    font-size: 14px;
+    line-height: 14px;
+    margin-left: 16px;
+  }
+
+  .text_skills {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.2;
+    margin-left: 16px;
+  }
+
+  .my_education {
+    margin-top: 56px;
+    margin-right: 40px;
+    margin-left: 40px;
+    display: flex;
+    align-items: center;
+  }
+
+  .my_education img {
+    max-width: 160px;
+  }
+
+  .experience {
+    margin-top: 100px;
+    margin-right: 40px;
+    margin-left: 40px;
+    text-align: center;
+  }
+  
+  .text_experience {
+    font-weight: 500;
+    color:#CACACA;
+    font-size: 16px;
+  }
+  
+  .table_experience {
+    position: relative;
+    font-weight: 500;
+    font-size: 14px;
+    width: 100%;
+  }
+  
+  .content_container {
+    display: flex;
+  }
+  
+  .skill_lines {
+    text-align: left;
+    margin-left: 40px;
+    width: 100%;
+  }
+  
+  .text_skill_bar {
+    font-weight: 500;
+    font-size: 16px;
+    margin: 14px 0;
+  }
+  
+  .skill_bar {
+    flex-grow: 1;
+    height: 14px;
+    background-color: #CACACA;
+    border-radius: 2px;
+    margin: 0;
+  }
+  
+  .skill_per {
+    height: 14px;
+    background-color: #E75050;
+    position: relative;
+  }
+
+  .skill_per.fill {
+    animation: fillBar 4.5s 1;
+}
+  
+  .skill_per::before {
+    content: attr(per);
+    position: absolute;
+    background-color: #CACACA;
+    border-radius: 3px;
+    font-size: 8px;
+    top: -31px;
+    right: 0;
+    transform: translateX(50%);
+  }
+  
+  .skill_per::after {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background-color: #CACACA;
+    top: -16px;
+    right: 0;
+    transform: translateX(50%) rotate(45deg);
+  }
+  
+  @keyframes fillBar {
+    from {
+      width: 0;
+    }
+  
+    to {
+      width: 100%;
+    }
+  }
+
+  .contacts {
+    margin-top: 88px;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .text_contacts {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.2;
+    margin-top: 54px;
+    margin-left: 10px;
+    margin-right: 10px;
+    text-align: center;
+  }
+
+  .contacts img {
+    max-width: 160px;
+  }
+  
+  .links {
+    margin-right: 32px;
+    margin-left: 32px;
+    margin-top: 84px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .links img {
+    max-width: 24px;
+  }
+}
+
+@media (max-width: 475px) {
+  .header {
+    display: flex;
+    position: fixed;
+    justify-content: space-between;
+    text-align: center;
+    background-color: black;
+    width: 100%;
+  }
+
+  .header_text {
+    font-family: 'Inknut Antiqua', serif;
+    font-weight: 900;
+    font-size: 7px;
+    color: #E75050;
+    margin-left: 28px;
+    margin-right: 28px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .skills {
+    padding-top: 24px;
+    margin-right: 38px;
+    display: flex;
+    align-items: center;
+  }
+
+  .skills img {
+    max-width: 200px;
+  }
+
+  .header_text_skills1 {
+    font-size: 18px;
+    line-height: 18px;
+    margin-left: 16px;
+  }
+  
+  .header_text_skills2 {
+    font-size: 14px;
+    line-height: 14px;
+    margin-left: 16px;
+  }
+
+  .text_skills {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.2;
+    margin-left: 16px;
+  }
+
+  .my_education {
+    margin-top: 56px;
+    margin-right: 40px;
+    margin-left: 40px;
+    display: flex;
+    align-items: center;
+  }
+
+  .my_education img {
+    max-width: 160px;
+  }
+
+  .experience {
+    margin-top: 90px;
+    margin-right: 28px;
+    margin-left: 28px;
+    text-align: center;
+  }
+  
+  .text_experience {
+    font-weight: 500;
+    color:#CACACA;
+    font-size: 14px;
+  }
+  
+  .table_experience {
+    position: relative;
+    font-weight: 500;
+    font-size: 12px;
+    width: 100%;
+  }
+  
+  .content_container {
+    display: flex;
+  }
+  
+  .skill_lines {
+    text-align: left;
+    margin-left: 28px;
+    width: 100%;
+  }
+  
+  .text_skill_bar {
+    font-weight: 500;
+    font-size: 14px;
+    margin: 12px 0;
+  }
+  
+  .skill_bar {
+    flex-grow: 1;
+    height: 12px;
+    background-color: #CACACA;
+    border-radius: 2px;
+    margin: 0;
+  }
+  
+  .skill_per {
+    height: 12px;
+    background-color: #E75050;
+    position: relative;
+  }
+
+  .skill_per.fill {
+    animation: fillBar 4.5s 1;
+}
+  
+  .skill_per::before {
+    content: attr(per);
+    position: absolute;
+    background-color: #CACACA;
+    border-radius: 3px;
+    font-size: 8px;
+    top: -26px;
+    right: 0;
+    transform: translateX(50%);
+  }
+  
+  .skill_per::after {
+    content: '';
+    position: absolute;
+    width: 7px;
+    height: 7px;
+    background-color: #CACACA;
+    top: -10px;
+    right: 0;
+    transform: translateX(50%) rotate(45deg);
+  }
+  
+  @keyframes fillBar {
+    from {
+      width: 0;
+    }
+  
+    to {
+      width: 100%;
+    }
+  }
+
+  .contacts {
+    margin-top: 80px;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .text_contacts {
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 1;
+    margin-top: 42px;
+    margin-left: 10px;
+    margin-right: 10px;
+    text-align: center;
+  }
+
+  .contacts img {
+    max-width: 116px;
+  }
+  
+  .links {
+    margin-right: 38px;
+    margin-left: 38px;
+    margin-top: 68px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .links img {
+    max-width: 22px;
+  }
+}
+
+@media (max-width: 390px) {
+  .header {
+    display: flex;
+    position: fixed;
+    justify-content: space-between;
+    text-align: center;
+    background-color: black;
+    width: 100%;
+  }
+
+  .header_text {
+    font-family: 'Inknut Antiqua', serif;
+    font-weight: 900;
+    font-size: 6px;
+    color: #E75050;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .skills {
+    padding-top: 24px;
+    margin-right: 30px;
+    display: flex;
+    align-items: center;
+  }
+
+  .skills img {
+    max-width: 200px;
+  }
+
+  .header_text_skills1 {
+    font-size: 18px;
+    line-height: 18px;
+    margin-left: 16px;
+  }
+  
+  .header_text_skills2 {
+    font-size: 14px;
+    line-height: 14px;
+    margin-left: 16px;
+  }
+
+  .text_skills {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.2;
+    margin-left: 16px;
+  }
+
+  .my_education {
+    margin-top: 56px;
+    margin-right: 40px;
+    margin-left: 40px;
+    display: flex;
+    align-items: center;
+  }
+
+  .my_education img {
+    max-width: 160px;
+  }
+
+  .experience {
+    margin-top: 85px;
+    margin-right: 20px;
+    margin-left: 20px;
+    text-align: center;
+  }
+  
+  .text_experience {
+    font-weight: 500;
+    color:#CACACA;
+    font-size: 12px;
+  }
+  
+  .table_experience {
+    position: relative;
+    font-weight: 500;
+    font-size: 10px;
+    width: 100%;
+  }
+  
+  .content_container {
+    display: flex;
+  }
+  
+  .skill_lines {
+    text-align: left;
+    margin-left: 20px;
+    width: 100%;
+  }
+  
+  .text_skill_bar {
+    font-weight: 500;
+    font-size: 12px;
+    margin: 10px 0;
+  }
+  
+  .skill_bar {
+    flex-grow: 1;
+    height: 10px;
+    background-color: #CACACA;
+    border-radius: 2px;
+    margin: 0;
+  }
+  
+  .skill_per {
+    height: 10px;
+    background-color: #E75050;
+    position: relative;
+  }
+
+  .skill_per.fill {
+    animation: fillBar 4.5s 1;
+}
+  
+  .skill_per::before {
+    content: attr(per);
+    position: absolute;
+    background-color: #CACACA;
+    border-radius: 3px;
+    font-size: 6px;
+    top: -20px;
+    right: 0;
+    transform: translateX(50%);
+  }
+  
+  .skill_per::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background-color: #CACACA;
+    top: -8px;
+    right: 0;
+    transform: translateX(50%) rotate(45deg);
+  }
+  
+  @keyframes fillBar {
+    from {
+      width: 0;
+    }
+  
+    to {
+      width: 100%;
+    }
+  }
+
+  .contacts {
+    margin-top: 72px;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .text_contacts {
+    font-weight: 500;
+    font-size: 10px;
+    line-height: 1;
+    margin-top: 36px;
+    margin-left: 8px;
+    margin-right: 8px;
+    text-align: center;
+  }
+
+  .contacts img {
+    max-width: 100px;
+  }
+  
+  .links {
+    margin-right: 32px;
+    margin-left: 32px;
+    margin-top: 42px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .links img {
+    max-width: 18px;
+  }
+}
